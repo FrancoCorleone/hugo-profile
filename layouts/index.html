@@ -1,7 +1,5 @@
 {{ define "head" }}
-{{ with .Params.og }}
-<meta property="og:image" content={{ .image }}>
-{{ end }}
+<meta property="og:image" content="{{ .Site.Params.staticPath }}/{{ .Site.Params.openGraph.image }}">
 <meta name="description" content={{ .Site.Params.description }}>
 <link rel="stylesheet" href="{{ .Site.Params.staticPath }}/css/index.css" media="all">
 <link rel="stylesheet" href="{{ .Site.Params.staticPath }}/css/projects.css" media="all">
